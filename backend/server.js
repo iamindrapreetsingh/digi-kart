@@ -17,9 +17,9 @@ connectDB();
 const app = express();
 
 if (process.env.NODE_ENV === 'development') {
-    app.use(morgan('dev'))
+  app.use(morgan('dev'))
 }
-  
+
 app.use(express.json())
 
 app.use('/api/products', productRoutes)
@@ -30,8 +30,8 @@ const __dirname = path.resolve()
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')))
 
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, '/frontend/build')))
-    app.get('*', (req, res) =>
+  app.use(express.static(path.join(__dirname, '/frontend/build')))
+  app.get('*', (req, res) =>
     res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
   )
 } else {
@@ -42,5 +42,5 @@ if (process.env.NODE_ENV === 'production') {
 
 
 app.listen(port, () => {
-    console.log(`Server running at ${port}`);
+  console.log(`Server running at ${port}`);
 });
