@@ -65,10 +65,10 @@ h2 {
 
 @media (max-width: 570px) {
   .search-button {
-    margin-top: 4px;
+    margin-top: 8px;
   }
 
   .search-box {
-    margin-top: 4px;
+    margin-top: 8px;
   }
 }
