@@ -39,7 +39,7 @@ const RegisterScreen = ({ location, history }) => {
   return (
     <FormContainer>
       <h1>Sign Up</h1>
-      {message && <Message variant='danger'>Fill out the required information</Message>}
+      {message && <Message variant='danger'>User already exists with this email</Message>}
       {error && <Message variant='danger'>Fill out the required information</Message>}
       {loading && <Loader />}
       <Form onSubmit={submitHandler}>
