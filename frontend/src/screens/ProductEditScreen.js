@@ -117,7 +117,6 @@ const ProductEditScreen = ({ match, history }) => {
               <Form.Control
                 type='number'
                 placeholder='Enter price'
-                value={price}
                 onChange={(e) => setPrice(e.target.value)}
               ></Form.Control>
             </Form.Group>
@@ -130,12 +129,6 @@ const ProductEditScreen = ({ match, history }) => {
                 value={image}
                 onChange={(e) => setImage(e.target.value)}
               ></Form.Control>
-              <Form.File
-                id='image-file'
-                label='Choose File'
-                custom
-                onChange={uploadFileHandler}
-              ></Form.File>
               {uploading && <Loader />}
             </Form.Group>
 
@@ -144,7 +137,6 @@ const ProductEditScreen = ({ match, history }) => {
               <Form.Control
                 type='text'
                 placeholder='Enter brand'
-                value={brand}
                 onChange={(e) => setBrand(e.target.value)}
               ></Form.Control>
             </Form.Group>
@@ -154,7 +146,6 @@ const ProductEditScreen = ({ match, history }) => {
               <Form.Control
                 type='text'
                 placeholder='Enter category'
-                value={category}
                 onChange={(e) => setCategory(e.target.value)}
               ></Form.Control>
             </Form.Group>
@@ -164,7 +155,6 @@ const ProductEditScreen = ({ match, history }) => {
               <Form.Control
                 type='text'
                 placeholder='Enter description'
-                value={description}
                 onChange={(e) => setDescription(e.target.value)}
               ></Form.Control>
             </Form.Group>
