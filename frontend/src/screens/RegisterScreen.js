@@ -40,7 +40,7 @@ const RegisterScreen = ({ location, history }) => {
     <FormContainer>
       <h1>Sign Up</h1>
       {message && <Message variant='danger'>User already exists with this email</Message>}
-      {error && <Message variant='danger'>Fill out the required information</Message>}
+      {error && <Message variant='danger'>Input field may be empty or the user already exists</Message>}
       {loading && <Loader />}
       <Form onSubmit={submitHandler}>
         <Form.Group controlId='name'>
