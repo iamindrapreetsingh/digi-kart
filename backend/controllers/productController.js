@@ -108,6 +108,11 @@ const createProductReview = asyncHandler(async (req, res) => {
       throw new Error('Product already reviewed')
     }
 
+    if (rating === 0) {
+      res.status(400)
+      throw new Error('Rating cannot be 0')
+    }
+
     const review = {
       name: req.user.name,
       rating: Number(rating),
