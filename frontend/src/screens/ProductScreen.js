@@ -108,7 +108,7 @@ const ProductScreen = ({ history, match }) => {
                   )}
                   {loadingProductReview && <Loader />}
                   {errorProductReview && (
-                    <Message variant='danger'>You have already reviewed</Message>
+                    <Message variant='danger'>You have already reviewed/Please rate the product between 1 to 5</Message>
                   )}
                   {userInfo ? (
                     <Form onSubmit={submitHandler}>
